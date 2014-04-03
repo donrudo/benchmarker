@@ -2,7 +2,7 @@
 );
 
   var options = {
-    title: 'Company Performance'
+    title: 'Test Results, (nanoseconds)'
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));

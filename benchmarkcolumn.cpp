@@ -34,6 +34,10 @@ QObject(0)
    }
 }
 
+/**
+ * @brief BenchmarkColumn::BenchmarkColumn
+ * @param testname sets the name of the test to be run
+ */
 BenchmarkColumn::BenchmarkColumn(QString testname) :
 QObject(0)
 {
@@ -41,7 +45,11 @@ QObject(0)
    i_ValueX = QVector <quint64>(i_limit);
 }
 
-
+/**
+ * @brief BenchmarkColumn::start
+ * @description executes the test methods and gets the time it takes to finish each test.
+ *
+ */
 void BenchmarkColumn::start(){
     i_ValueX = QVector<quint64>(i_limit);
     this->i_counter = 0;
@@ -54,6 +62,11 @@ void BenchmarkColumn::start(){
     }
 }
 
+/**
+ * @brief BenchmarkColumn::getXValue
+ * @param pos
+ * @return the nanoseconds result from a given ran point.
+ */
 quint64 BenchmarkColumn::getXValue(quint16 pos){
     int returnval = 0;
     if(pos > 0 && pos < getLimit()){
@@ -62,14 +75,26 @@ quint64 BenchmarkColumn::getXValue(quint16 pos){
     return returnval;
 }
 
+/**
+ * @brief BenchmarkColumn::getTestName
+ * @return the name given to the current test
+ */
 QString BenchmarkColumn::getTestName(){
     return this->s_TName;
 }
 
+/**
+ * @brief BenchmarkColumn::setTestName
+ * @param tname the test name to identify the current execution.
+ */
 void BenchmarkColumn::setTestName(QString tname){
     this->s_TName = tname;
 }
 
+/**
+ * @brief BenchmarkColumn::test
+ * Virtual function to be overriden by each executed test.
+ */
 void BenchmarkColumn::test(){
 
 }

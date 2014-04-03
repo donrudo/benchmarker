@@ -2,6 +2,14 @@
 #include "testobject.h"
 #include "testobject2.h"
 #include <iostream>
+
+/**
+ * @brief BenchmarkerOut::BenchmarkerOut
+ * @param parent
+ *
+ * reads the template files from the QRC to be used to generate the JS output
+ *
+ */
 BenchmarkerOut::BenchmarkerOut(QObject *parent) :
     QObject(parent)
 {
@@ -29,6 +37,11 @@ BenchmarkerOut::~BenchmarkerOut(){
     qDeleteAll(this->l_columns);
 }
 
+/**
+ * @brief BenchmarkerOut::save
+ * Saves the results to the default path
+ * @TODO add the chance to customize the output path
+ */
 void BenchmarkerOut::save()
 {
     QFile mF_out("html/benchmarkout.js");
@@ -39,6 +52,11 @@ void BenchmarkerOut::save()
     mF_out.close();
 }
 
+/**
+ * @brief BenchmarkerOut::run
+ * Executes all the tests and gets the current results from each given column
+ * @TODO May Need optimization.
+ */
 void BenchmarkerOut::run()
 {
     int i = 0;
