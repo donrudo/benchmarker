@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/js">
+        <file>Foot.js</file>
+        <file>Head.js</file>
+    </qresource>
+    <qresource prefix="/output">
+        <file>html/index.html</file>
+        <file>html/benchmarkout.js</file>
+    </qresource>
+</RCC>
