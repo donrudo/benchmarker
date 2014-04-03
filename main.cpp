@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     try1.setName("Vector vs QList");
     try1.setLimit(1024);
-    try1.setUnitName("Microseconds");
+    try1.setUnitName("Nanoseconds");
     try1.setTestName("QList int");
     try2.setTestName("STD Vector int");
     try3.setTestName("QVector int");

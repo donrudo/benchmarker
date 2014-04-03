@@ -2,7 +2,7 @@ google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 function drawChart() {
   var data = google.visualization.arrayToDataTable(
-[[ "Microseconds","QList int","STD Vector int","QVector int","STD List int"],
+[[ "Nanoseconds","QList int","STD Vector int","QVector int","STD List int"],
 ["0",0,0,0,0],
 ["1",567771,67579,292536,2409318],
 ["2",491391,71729,318261,2351786],
